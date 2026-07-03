@@ -1,0 +1,15 @@
+services:
+  api:
+    build: .
+    image: fastapi-sqlalchemy:latest
+    container_name: product-api
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:////app/data/products.db
+    volumes:
+      - product-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  product-data:
