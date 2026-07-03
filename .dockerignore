@@ -1,0 +1,23 @@
+# Virtual environment — dependencies are installed inside the image
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local SQLite — use a volume in Docker instead
+products.db
+
+# Git
+.git/
+.gitignore
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+
+# Docs (optional)
+TUTORIAL.md
+README.md
